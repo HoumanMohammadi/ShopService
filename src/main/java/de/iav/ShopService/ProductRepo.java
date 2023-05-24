@@ -16,20 +16,11 @@ public class ProductRepo {
 
     public List<Product> getProductList() {
         Collection<Product> values= productMap.values();
-        return (List<Product>) values;
+        return new ArrayList<>(values);
     }
 
-    public String
-
-
-    @Override
-    public String toString() {
-        return "ProductRepo{" +
-                "productList=" + productMap +
-                '}';
-    }
 
     public Product get(String productID) {
-        productMap.get(productID);
+        return productMap.get(productID);
     }
 }
